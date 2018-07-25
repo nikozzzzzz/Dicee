@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        func updateDices()
+    updateDices()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
-        func updateDices()
+    updateDices()
         
         
     }
@@ -49,6 +49,9 @@ class ViewController: UIViewController {
         
         diceImageView1.image = UIImage (named: diceArray[diceRandomVariable1])
         diceImageView2.image = UIImage (named: diceArray[diceRandomVariable2])
+    }
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        updateDices()
     }
 }
 
